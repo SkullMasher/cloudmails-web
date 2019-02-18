@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Mailmaster gestion de mail">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mailmaster</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="place-center">
+    <main class="">
+      <?php foreach ($mail_list as $mail): ?>
+        <div>
+          <p><?php echo $mail->email ?> <button class="btn btn--danger js-deleteMail" data-id="<?php echo $mail->id ?>">X</button></p>
+        </div>
+      <?php endforeach ?>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <?php require_once('footer.phtml') ?>
+  </footer>
+  <script type="text/javascript" src="js/admin.js"></script>
+</body>
+</html>

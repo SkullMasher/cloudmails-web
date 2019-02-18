@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Mailmaster gestion de mail">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mailmaster</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="place-center">
+    <main>
+      <form method="post">
+        <p>
+          <div>
+            <label for="newUserMail">Mail <span class="color--success js-newUserDebug"></span></label>
+          </div>
+            <input class="js-inputMail" type="text" name="newUserMail" id="newUserMail">
+            @mailmaster.fr
+        </p>
+        <p>
+          <div>
+            <label for="newUserPassword">Mot de passe</label>
+          </div>
+          <input class="js-inputMailPass" type="password" name="newUserPassword" id="newUserPassword">
+        </p>
+        <p>
+          <input class="btn btn--primary js-mailSubmit" disabled="disabled" type="submit" name="portalsubmit" id="newUserSubmit" value="Créer un nouveau mail">
+        </p>
+      </form>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <?php require_once('footer.phtml') ?>
+  </footer>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

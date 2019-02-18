@@ -1,0 +1,14 @@
+<?php
+/**
+ * Database settings, ORM is Eloquent
+ */
+$databaseSettings = [
+  'driver' => 'mysql',
+  'host' => '127.0.0.1',
+  'database' => 'servermail',
+  'username' => 'databaseuser',
+  'password' => 'databasepassword',
+  'charset'   => 'utf8',
+  'collation' => 'utf8_unicode_ci',
+  'prefix'    => '',
+];
