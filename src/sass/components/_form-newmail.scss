@@ -1,0 +1,54 @@
+.form-newmail {
+  border: 3px solid $blue-300;
+  border-radius: 10px;
+  margin: $spacer-small;
+  padding: $spacer-small;
+  background-color: $blue-300;
+  color: $white;
+
+  @include respond-to('small-up') {
+    padding: $spacer-medium;
+  }
+
+  &__title {
+    @include font-size(h3);
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  &__input-group {
+    margin-bottom: $spacer-small;
+  }
+
+  &__label {
+    display: block;
+    font-weight: bold;
+  }
+
+  &__input {
+    box-shadow: 0 0 0 1px $gray-600;
+    background-color: $white;
+    color: $gray-900;
+
+    &:focus {
+      // box-shadow: 0 0 0 1px $gray-700 inset;
+    }
+
+    &--valid {
+      box-shadow: 0 0 0 1px $green-500 inset;
+    }
+
+    &--invalid {
+      box-shadow: 0 0 0 1px $green-500 inset;
+    }
+  }
+
+  &__domain {
+    color: $white;
+    font-weight: bold;
+  }
+
+  &__submit {
+    font-weight: bold;
+  }
+}

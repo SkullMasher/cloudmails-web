@@ -62,23 +62,6 @@ a.btn {
   }
 }
 
-.form-newmail {
-  border: 3px solid $blue-300;
-  border-radius: 15px;
-  margin: $spacer-small;
-  padding: $spacer-small;
-  background-color: $white;
-
-  @include respond-to('small-up') {
-    padding: $spacer-medium;
-  }
-}
-
-.js-inputMail, .js-inputMailPass {
-  background-color: $white;
-  color: $gray-900;
-}
-
 .site-footer {
   grid-row-start: 2; // Sticky footer
   grid-row-end: 3; // Sticky footer

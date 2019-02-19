@@ -5,7 +5,7 @@ const greetingMessage = () => {
   console.log(`#   #   # `)
   console.log(`#########  Come contribute to the code !`)
   console.log(` ### ###  `)
-  console.log(`  #####    github.com/SkullMasher/wish-card-2019`)
+  console.log(`  #####    github.com/SkullMasher/cloudmails-web`)
   console.log(`  # # #   `)
 }
 
@@ -65,15 +65,15 @@ let formChecker = () => {
         .then(response => {
           if (response) {
             mailInputIsCorrect = true
-            $mailInput.classList.remove('border-danger')
-            $mailInput.classList.add('border-success')
+            $mailInput.classList.remove('form-newmail__input--invalid')
+            $mailInput.classList.add('form-newmail__input--valid')
             $newUserDebug.classList.replace('color--danger', 'color--success')
             $newUserDebug.innerText = '✓'
 
           } else {
             mailInputIsCorrect = false
-            $mailInput.classList.remove('border-success')
-            $mailInput.classList.add('border-danger')
+            $mailInput.classList.remove('form-newmail__input--valid')
+            $mailInput.classList.add('form-newmail__input--invalid')
             $newUserDebug.classList.replace('color--success', 'color--danger')
             $newUserDebug.innerText = 'Ce mail éxiste déjà'
           }
@@ -83,8 +83,8 @@ let formChecker = () => {
         })
     } else {
       mailInputIsCorrect = false
-      $mailInput.classList.remove('border-success')
-      $mailInput.classList.add('border-danger')
+      $mailInput.classList.remove('form-newmail__input--valid')
+      $mailInput.classList.add('form-newmail__input--invalid')
       $newUserDebug.classList.replace('color--success', 'color--danger')
       $newUserDebug.innerText = 'Charactère spéciaux non autorisé'
     }
@@ -95,12 +95,12 @@ let formChecker = () => {
   $mailPass.addEventListener('input', (event) => {
     if ($mailPass.value) {
       mailPassIsCorrect = true
-      $mailPass.classList.remove('border-danger')
-      $mailPass.classList.add('border-success')
+      $mailPass.classList.remove('form-newmail__input--invalid')
+      $mailPass.classList.add('form-newmail__input--valid')
     } else {
       mailPassIsCorrect = false
-      $mailPass.classList.remove('border-success')
-      $mailPass.classList.add('border-danger')
+      $mailPass.classList.remove('form-newmail__input--valid')
+      $mailPass.classList.add('form-newmail__input--invalid')
     }
 
     isFormCompleted()
@@ -122,8 +122,8 @@ let formChecker = () => {
               mailPassIsCorrect = false
               $mailSubmit.disabled = true
               $newUserDebug.innerText = ''
-              $mailInput.classList.remove('border-success')
-              $mailPass.classList.remove('border-success')
+              $mailInput.classList.remove('form-newmail__input--valid')
+              $mailPass.classList.remove('form-newmail__input--valid')
             case 23000:
               console.log('Ce mail éxiste déjà')
               break;
