@@ -1,2 +1,2 @@
-# Mailmaster-portal
-Portail de gestion de compte mail pour le site [mailmaster.fr](https://mailmaster.fr).
+# Cloudmails website
+Source code for the website [cloudmails.eu](https://cloudmails.eu).
