@@ -2,12 +2,26 @@
   border: 3px solid $blue-300;
   border-radius: 10px;
   margin: $spacer-small;
-  padding: $spacer-small;
+  padding-top: $spacer-small;
+  padding-right: $spacer-small;
+  padding-bottom: $spacer-small;
+  padding-left: $spacer-small;
   background-color: $blue-300;
   color: $white;
 
+
   @include respond-to('small-up') {
-    padding: $spacer-medium;
+    padding-top: $spacer-medium;
+    padding-right: $spacer-medium;
+    padding-bottom: $spacer-medium;
+    padding-left: $spacer-medium;
+  }
+
+  @include respond-to('medium-up') {
+    padding-top: $spacer-medium;
+    padding-right: $spacer-large;
+    padding-bottom: $spacer-medium;
+    padding-left: $spacer-large;
   }
 
   &__title {
