@@ -2825,6 +2825,10 @@ a.btn {
   fill: #5BC0DE;
 }
 
+.site-tagline {
+  max-width: 460px;
+}
+
 .form-newmail {
   border: 3px solid #5BC0DE;
   border-radius: 15px;
