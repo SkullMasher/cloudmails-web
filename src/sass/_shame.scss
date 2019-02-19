@@ -33,9 +33,33 @@ a.btn {
   align-items: center;
 }
 
-.flex-space-around {
+.flex-center {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.site-hero {
+  color: $blue-300;
+  margin-bottom: $spacer-large;
+}
+
+.site-logo {
+  > svg {
+    width: 150px;
+    fill: $blue-300;
+
+  }
+}
+
+.form-newmail {
+  border: 3px solid $blue-300;
+  border-radius: 15px;
+  margin: $spacer-small;
+  padding: $spacer-small;
+
+  @include respond-to('small-up') {
+    padding: $spacer-medium;
+  }
 }
 
 .js-inputMail, .js-inputMailPass {

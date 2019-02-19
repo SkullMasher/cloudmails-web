@@ -1,0 +1,47 @@
+/**
+ * The box object simply boxes off content. Extend with cosmetic styles in the
+ * Components layer.
+ *
+ * 1. So we can apply the `.box` class to naturally-inline elements.
+ */
+.box {
+  display: block; /* [1] */
+  padding: $spacer-small;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+// Size variants
+.box--flush {
+  padding: 0;
+}
+
+.box--tiny {
+  padding: $spacer-tiny;
+}
+
+.box--medium {
+  padding: $spacer-medium;
+}
+
+.box--large {
+  padding: $spacer-large;
+}
+
+.box--huge {
+  padding: $spacer-ultra-large;
+}
+
+// Positioned variants
+.box--centered {
+  // Needs a flex container
+  margin: auto;
+}
+
+// Color variants
+.box--light {
+ background-color: $gray-100;
+}

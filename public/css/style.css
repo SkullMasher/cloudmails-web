@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-* www.KNACSS.com v7.1.1 (december, 10 2018) @author: Alsacreations, Raphael Goetter
+* www.KNACSS.com v7.1.0 (october, 31 2018) @author: Alsacreations, Raphael Goetter
 * Licence WTFPL http://www.wtfpl.net/
 */
 /* ----------------------------- */
@@ -390,7 +390,7 @@ html {
 body {
   margin: 0;
   font-size: 1.4rem;
-  background-color: #f8f9fa;
+  background-color: #fff;
   color: #212529;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   line-height: 1.5;
@@ -409,7 +409,7 @@ a {
 }
 
 a:focus, a:hover, a:active {
-  color: #025aa5;
+  color: #014c8c;
   text-decoration: underline;
 }
 
@@ -2721,41 +2721,6 @@ button:focus {
   display: none;
 }
 
-@font-face {
-  font-family: 'charm';
-  src: url("../font/charm/charm-regular-webfont.woff2") format("woff2"), url("../font/charm/charm-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-.color--muted {
-  color: #e7e9ed;
-}
-
-.color--primary {
-  color: #0275D8;
-}
-
-.color--success {
-  color: #5CB85C;
-}
-
-.color--danger {
-  color: #D9534F;
-}
-
-.background--gray100 {
-  background-color: #f8f9fa;
-}
-
-.background--gray900 {
-  background-color: #212529;
-}
-
-.background--gradientgray {
-  background: linear-gradient(to top, #333, #212529);
-}
-
 .wrapper {
   max-width: 960px;
   margin-right: auto;
@@ -2766,6 +2731,50 @@ button:focus {
 
 .wrapper--small {
   max-width: 700px;
+}
+
+/**
+ * The box object simply boxes off content. Extend with cosmetic styles in the
+ * Components layer.
+ *
+ * 1. So we can apply the `.box` class to naturally-inline elements.
+ */
+.box {
+  display: block;
+  /* [1] */
+  padding: 1rem;
+}
+
+.box > :last-child {
+  margin-bottom: 0;
+}
+
+.box--flush {
+  padding: 0;
+}
+
+.box--tiny {
+  padding: 0.5rem;
+}
+
+.box--medium {
+  padding: 2rem;
+}
+
+.box--large {
+  padding: 4rem;
+}
+
+.box--huge {
+  padding: 16rem;
+}
+
+.box--centered {
+  margin: auto;
+}
+
+.box--light {
+  background-color: #f8f9fa;
 }
 
 html {
@@ -2801,9 +2810,32 @@ a.btn {
   align-items: center;
 }
 
-.flex-space-around {
+.flex-center {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.site-hero {
+  color: #5BC0DE;
+  margin-bottom: 4rem;
+}
+
+.site-logo > svg {
+  width: 150px;
+  fill: #5BC0DE;
+}
+
+.form-newmail {
+  border: 3px solid #5BC0DE;
+  border-radius: 15px;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 576px) {
+  .form-newmail {
+    padding: 2rem;
+  }
 }
 
 .js-inputMail, .js-inputMailPass {
@@ -2869,6 +2901,34 @@ a.btn {
   100% {
     filter: blur(12px) opacity(0%);
   }
+}
+
+.color--muted {
+  color: #e7e9ed;
+}
+
+.color--primary {
+  color: #0275D8;
+}
+
+.color--success {
+  color: #5CB85C;
+}
+
+.color--danger {
+  color: #D9534F;
+}
+
+.background--gray100 {
+  background-color: #f8f9fa;
+}
+
+.background--gray900 {
+  background-color: #212529;
+}
+
+.background--gradientgray {
+  background: linear-gradient(to top, #333, #212529);
 }
 
 /*# sourceMappingURL=style.map.css */

@@ -7,8 +7,9 @@ $wrapper-width-default: 960px;
   margin-left: auto;
   padding-right: $spacer-small;
   padding-left: $spacer-small;
+
+  &--small {
+    max-width: $wrapper-width-small;
+  }
 }
 
-.wrapper--small {
-  max-width: $wrapper-width-small;
-}

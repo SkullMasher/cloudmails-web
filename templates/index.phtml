@@ -10,24 +10,32 @@
 <body>
   <div class="place-center">
     <main>
-      <form method="post">
-        <p>
-          <div>
-            <label for="newUserMail">Mail <span class="color--success js-newUserDebug"></span></label>
-          </div>
-            <input class="js-inputMail" type="text" name="newUserMail" id="newUserMail">
-            @cloudmails.eu
-        </p>
-        <p>
-          <div>
-            <label for="newUserPassword">Mot de passe</label>
-          </div>
-          <input class="js-inputMailPass" type="password" name="newUserPassword" id="newUserPassword">
-        </p>
-        <p>
-          <input class="btn btn--primary js-mailSubmit" disabled="disabled" type="submit" name="portalsubmit" id="newUserSubmit" value="Créer un nouveau mail">
-        </p>
-      </form>
+      <header class="box txtcenter site-hero">
+        <picture class="site-logo"><?php echo file_get_contents('../public/img/logo.svg') ?></picture>
+        <h1>Créer un compte mail gratuit et sécurisé</h1>
+      </header>
+      <div class="flex-center">
+        <div class="form-newmail">
+          <form>
+            <p>
+              <div>
+                <label for="newUserMail">Mail <span class="color--success js-newUserDebug"></span></label>
+              </div>
+                <input class="js-inputMail" type="text" name="newUserMail" id="newUserMail">
+                @cloudmails.eu
+            </p>
+            <p>
+              <div>
+                <label for="newUserPassword">Mot de passe</label>
+              </div>
+              <input class="js-inputMailPass" type="password" name="newUserPassword" id="newUserPassword">
+            </p>
+            <p>
+              <input class="btn btn--primary js-mailSubmit" disabled="disabled" type="submit" name="portalsubmit" id="newUserSubmit" value="Créer mon adresse mail">
+            </p>
+          </form>
+        </div>
+      </div>
     </main>
   </div>
   <footer class="site-footer">
