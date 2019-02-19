@@ -56,6 +56,10 @@ a.btn {
 .site-tagline {
   max-width: 330px;
   margin: 0 auto;
+
+  @include respond-to('small-up') {
+    max-width: 350px;
+  }
 }
 
 .form-newmail {
