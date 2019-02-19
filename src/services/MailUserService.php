@@ -48,7 +48,7 @@ class MailUserService {
     } else {
       try {
         $this->virtualuser->domain_id = 1;
-        $this->virtualuser->email = $mail . '@mailmaster.fr';
+        $this->virtualuser->email = $mail . '@cloudmails.eu';
         $this->virtualuser->password = $hashedPassword;
         $this->virtualuser->save();
         return json_encode(true);
@@ -79,7 +79,7 @@ class MailUserService {
   }
 
   public function isUniq($data) {
-    $mail = $data[0] . '@mailmaster.fr';
+    $mail = $data[0] . '@cloudmails.eu';
     return json_encode($this->virtualuser->where('email', '=', $mail)->doesntExist());
   }
 }
