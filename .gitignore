@@ -1,6 +1,6 @@
 # Sensible credentials
 src/settings/database.php
-src/settings/access.php
+src/settings/adminaccess.php
 
 # Logs
 logs

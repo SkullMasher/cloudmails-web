@@ -107,6 +107,7 @@ let formChecker = () => {
   })
 
   $mailSubmit.addEventListener('click', (event) => {
+    event.preventDefault()
     if (isFormCompleted()) {
       event.preventDefault()
       const data = JSON.stringify([$mailInput.value, $mailPass.value])

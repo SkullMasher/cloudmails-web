@@ -1,0 +1,15 @@
+<?php
+/**
+ * Database settings, ORM is Eloquent
+ */
+$adminaccess = [
+  'ip' => [
+  	'user1' => [
+  		'66.42.66.42'
+  	],
+  	'user2' => [
+  		'78.229.190.14',
+  		'98.32.54.123'
+  	]
+  ],
+];
