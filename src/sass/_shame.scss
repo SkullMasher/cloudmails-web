@@ -44,6 +44,8 @@ a.btn {
 }
 
 .site-logo {
+  display: block;
+
   > svg {
     width: 150px;
     fill: $blue-300;
@@ -52,7 +54,8 @@ a.btn {
 }
 
 .site-tagline {
-  max-width: 460px;
+  max-width: 330px;
+  margin: 0 auto;
 }
 
 .form-newmail {
@@ -60,6 +63,7 @@ a.btn {
   border-radius: 15px;
   margin: $spacer-small;
   padding: $spacer-small;
+  background-color: $white;
 
   @include respond-to('small-up') {
     padding: $spacer-medium;
@@ -74,10 +78,12 @@ a.btn {
 .site-footer {
   grid-row-start: 2; // Sticky footer
   grid-row-end: 3; // Sticky footer
-  margin-top: 0;
-  margin-right: $spacer-small;
-  margin-bottom: $spacer-small;
-  margin-left: $spacer-small;
+  background-color: $blue-300;
+  color: $white;
+
+  a {
+    color: $white;
+  }
 }
 
 .slide-out-blurred-left {
