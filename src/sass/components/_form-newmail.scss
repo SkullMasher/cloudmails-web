@@ -49,11 +49,11 @@
     }
 
     &--valid {
-      box-shadow: 0 0 0 1px $green-500 inset;
+      box-shadow: 0 0 0 1px $color-success inset;
     }
 
     &--invalid {
-      box-shadow: 0 0 0 1px $green-500 inset;
+      box-shadow: 0 0 0 1px $color-danger inset;
     }
   }
 

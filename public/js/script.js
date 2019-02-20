@@ -67,25 +67,25 @@ let formChecker = () => {
             mailInputIsCorrect = true
             $mailInput.classList.remove('form-newmail__input--invalid')
             $mailInput.classList.add('form-newmail__input--valid')
-            $newUserDebug.classList.replace('color--danger', 'color--success')
+            $newUserDebug.classList.remove('color--danger')
             $newUserDebug.innerText = '✓'
 
           } else {
             mailInputIsCorrect = false
             $mailInput.classList.remove('form-newmail__input--valid')
             $mailInput.classList.add('form-newmail__input--invalid')
-            $newUserDebug.classList.replace('color--success', 'color--danger')
+            $newUserDebug.classList.add('color--danger')
             $newUserDebug.innerText = 'Ce mail éxiste déjà'
           }
         }).catch(err => {
-          $newUserDebug.classList.replace('color--success', 'color--danger')
-          $newUserDebug.innerText = 'une érreur inconnue est survenue'
+          $newUserDebug.classList.add('color--danger')
+          $newUserDebug.innerText = 'Une érreur inconnue est survenue'
         })
     } else {
       mailInputIsCorrect = false
       $mailInput.classList.remove('form-newmail__input--valid')
       $mailInput.classList.add('form-newmail__input--invalid')
-      $newUserDebug.classList.replace('color--success', 'color--danger')
+      $newUserDebug.classList.add('color--danger')
       $newUserDebug.innerText = 'Charactère spéciaux non autorisé'
     }
 
