@@ -77,7 +77,7 @@ class MailUserService {
     $mail_id = $data[0];
     $mail_username = $data[1];
 
-    $user_exist = $this->virtualuser->where('id', '=', $mail_id)->exist();
+    $user_exist = $this->virtualuser->where('id', '=', $mail_id)->exists();
 
     if ( $user_exist && !empty($mail_username)) {
       $this->virtualuser->destroy($data[0]);
