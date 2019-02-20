@@ -125,6 +125,8 @@ let formChecker = () => {
               $newUserDebug.innerText = ''
               $mailInput.classList.remove('form-newmail__input--valid')
               $mailPass.classList.remove('form-newmail__input--valid')
+              location = '/mail'
+              break;
             case 23000:
               console.log('Ce mail éxiste déjà')
               break;
