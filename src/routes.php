@@ -26,8 +26,6 @@ $app->post('/', function (Request $request, Response $response) {
 $app->group('/admin', function () use ($app) {
   $app->get('', function (Request $request, Response $response, array $args) {
     $this->logger->info('GET /admin');
-    $ipAddress = $request->getAttribute('ip_address');
-    $this->logger->info(json_encode($ipAddress));
     $mail_list = $this->mailuser_service->getAllMail();
 
     return $this->renderer->render($response, 'admin.phtml', ['mail_list' => $mail_list]);
