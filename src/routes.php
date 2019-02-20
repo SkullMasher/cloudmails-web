@@ -35,7 +35,6 @@ $app->group('/admin', function () use ($app) {
     $this->logger->info('POST /admin');
 
     $data = $request->getParsedBody();
-    $this->logger->info(json_encode($data));
     // is it a portal authentification or a new user
     return $this->mailuser_service->deleteMail($data);
   });

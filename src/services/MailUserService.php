@@ -79,9 +79,9 @@ class MailUserService {
     if (filter_var($mail_id, FILTER_VALIDATE_INT && !empty($mail_username))) {
       $this->virtualuser->destroy($data[0]);
       shell_exec('deletemailbox ' . escapeshellarg($mail_username));
-      return true;
+      return json_encode(true);
     } else {
-      return false;
+      return json_encode(false);
     }
   }
 
