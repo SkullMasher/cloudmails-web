@@ -34,13 +34,10 @@ $app->group('/admin', function () use ($app) {
   })->setName('admin');
 
   $app->post('', function (Request $request, Response $response) {
-    $adminURL = $this->router->pathFor('admin');
-    $this->logger->info('POST /');
-
-    $ipAddress = $request->getAttribute('ip_address');
-    $this->logger->info(json_encode($ipAddress));
+    $this->logger->info('POST /admin');
 
     $data = $request->getParsedBody();
+    $this->logger->info(json_encode($data));
     // is it a portal authentification or a new user
     return $this->mailuser_service->deleteMail($data);
   });

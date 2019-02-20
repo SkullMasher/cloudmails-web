@@ -27,8 +27,11 @@ let formChecker = () => {
   }
 
   $deleteMail.forEach((btn, index) => {
+    const mailAddress = btn.previousSibling.textContent
+    const mailUsername = mailAddress.split('@')[0]
+
     btn.addEventListener('click', (event) => {
-      postDeleteMail(location.href, JSON.stringify([btn.dataset.id]))
+      postDeleteMail(location.href, JSON.stringify([btn.dataset.id, mailUsername]))
         .then(response => {
           btn.parentNode.remove()
         })
