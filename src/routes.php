@@ -44,6 +44,4 @@ $app->group('/admin', function () use ($app) {
     // is it a portal authentification or a new user
     return $this->mailuser_service->deleteMail($data);
   });
-})->add(new RKA\Middleware\IpAddress());
-
-
+});
