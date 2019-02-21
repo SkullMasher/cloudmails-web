@@ -79,7 +79,7 @@ class MailUserService {
 
     $user_exist = $this->virtualuser->where('id', '=', $mail_id)->exists();
 
-    if ( $user_exist && !empty($mail_username)) {
+    if ($user_exist && !empty($mail_username)) {
       $this->virtualuser->destroy($data[0]);
       shell_exec('deletemailbox ' . escapeshellarg($mail_username));
       return json_encode(true);

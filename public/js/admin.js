@@ -34,7 +34,6 @@ let formChecker = () => {
     btn.addEventListener('click', (event) => {
       postDeleteMail(location.href, JSON.stringify([btn.dataset.id, mailUsername]))
         .then(response => {
-          console.log(JSON.parse(response))
           btn.parentNode.remove()
         })
         .catch(err => {
